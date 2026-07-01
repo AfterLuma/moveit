@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lez-css-Interno</title>
+    <style>
+        /* ---- CSS INTERNO ----- */
+
+        /* 
+           per dare il CSS al nostro file HTML dobbiamo puntare ai TAG, che 
+           nel nostro CSS prende il nome di SELETTORE (es: h1, h2, p, div, section ecc..)
+
+           scelto il SELETTORE dobbiamo impostare le proprietà del CSS
+           margin: serve per applicare del margine intorno al nostro SELETTORE
+           padding: imposta uno spazione tra il bordo e il testo/img/vide presente nel
+                    SELETTORE
+           border:  utile per disegnare un bordo intorno al nostro SELETTORE
+           color: imposta il colore solo al testo
+           background-color: imposta il colore di sfondo
+           text-align: puoi impostare il posizionamento del testo 
+           display: esistono contenitori di blocco come(h1->h6; p; div; section; article; )
+                    questi contenitori occupano l'intera larghezza della pagina web
+                    mentre contenitori di inline come (button; img; a;) non occupano l'intera
+                    larghezza della pagina web, e quindi li andrà a inserire uno accanto all'altro
+                    Per impostra una dimensione ai tag (button; img; a;) devi convertirli in 
+                    display: block
+            width: imposta la larghezza di un contenitore di blocco 
+            height: imposta altezza di un contenutore di blocco
+            border-radius: utile per arrotondare gli angoli di un contenitore di blocco
+            box-shadow: crea le ombre
+            cursor:pointer; imposta la mano quando arrivi su un bottone
+            font-weight: bold; imposta il grassetto al font
+
+        
+        */
+   
+
+       /* h1,h2 sono i nostri selettori*/ 
+       h1,h2{
+       
+            /*border: 1px solid black;*/
+
+     /*PROPRIETA' :  VALORE*/    
+            margin: 10px; /* il valore è impostato in px sarà un valore statico */
+            padding: 10px;
+            color:rgb(25, 255, 159); /* i colori posso esser nel formato esadecimale/RGBA*/
+            background-color:aquamarine;
+            text-align: center; /* center serve per mettere il testo al centro
+                                    lef: allinea il testo a sinistra
+                                    right: allinea il testo a destra
+                                    justify: estende il testo in modo giustificato*/
+        }
+
+        section{
+            /*border:1px solid black;*/
+            padding: 15px; 
+
+        }
+
+        div{           
+            padding:15px;
+            width: 250px;
+            border-radius: 12px;
+            background-color: #ccc; 
+            /* 
+                per impostare l'ombra devi lavorare sull'asse X-Y
+                        X |  y | intensità ombra | colore ombra*/
+            box-shadow: 0px 4px 8px gray;
+            margin: auto;
+            margin-bottom: 15px;
+            height: 250px;
+       
+        }
+
+        div img{
+            display:block;
+            border-radius: 50%;
+            box-shadow: 0px 4px 8px gray;
+            margin:auto;
+   
+        }
+
+        button{
+            display:block;
+            width: 50%;
+            /* il valore AUTO serve per posizionare il contenitore al centro*/
+            margin:auto;
+            /* none: elimina le impostazione date al bordo*/
+            border:none;
+            padding: 10px 0px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px gray;
+            cursor:pointer;
+
+        }
+
+
+        /* Pseudo-classe*/
+        /* :hover usalo quando vuoi dare un effetto al passaggio del mouse 
+                  al passaggio del mouse viene impostato il nuovo CSS */
+        button:hover{
+
+            background-color: green;
+            color: white;
+            font-weight: bold;
+
+            /* none: usalo quando vuoi eliminare valori impostati su una proprietà*/
+            box-shadow: none;
+
+        }
+
+        div:hover{
+            background-color: #f3f3f3;
+            box-shadow: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>IL mio HTML con CSS interno</h1>
+    <h2>coloriamo il nostro sito </h2>
+    
+
+    
+    <section>
+        <article>
+
+            <div>
+                <img src="../IMG/LucaVerdi.jfif" alt="Luca Verdi" width="80">
+                <h3>Luca Verdi</h3>
+                <p>sono il responsabile delle vendite</p>
+                <button>Contattami</button>
+            </div>            
+            <div>
+                <img src="../IMG/Mario Rossi.jfif" alt="Mario Rossi" width="80" height="80">
+                <h3>Mario rossi</h3>
+                <p>sono il responsabile delle vendite</p>
+                <button>Contattami</button>
+            </div>            
+            
+        </article>
+    </section>
+    
+</body>
+</html>

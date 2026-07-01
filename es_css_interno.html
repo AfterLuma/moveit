@@ -1,0 +1,94 @@
+INIZIO DOCUMENTO HTML
+    IMPOSTA lingua "it" e codifica caratteri "UTF-8"
+    IMPOSTA titolo della pagina: "Gusto & Fantasia - Ricette Facili"
+
+    INIZIO CORPO DELLA PAGINA
+        MOSTRA Titolo Principale (H1): "Gusto & Fantasia"
+        MOSTRA Sottotitolo (H2): "I piatti più amati della settimana"
+
+        INIZIO SEZIONE PRINCIPALE (Section)
+            INIZIO CONTENITORE ARTICOLO (Article)
+
+                // Prima Scheda Ricetta
+                INIZIO BLOCCO CONTENITORE (Div 1)
+                    MOSTRA Immagine del piatto "Carbonara" (Larghezza 80px)
+                    MOSTRA Titolo Ricetta (H3): "Spaghetti Carbonara"
+                    MOSTRA Testo (P): "Il classico romano pronto in 15 minuti."
+                    MOSTRA Pulsante (Button): "Cucina"
+                FINE BLOCCO CONTENITORE
+
+                // Seconda Scheda Ricetta
+                INIZIO BLOCCO CONTENITORE (Div 2)
+                    MOSTRA Immagine del dolce "Tiramisù" (Larghezza 80px, Altezza 80px)
+                    MOSTRA Titolo Ricetta (H3): "Tiramisù Classico"
+                    MOSTRA Testo (P): "Il dessert al caffè senza cottura."
+                    MOSTRA Pulsante (Button): "Cucina"
+                FINE BLOCCO CONTENITORE
+
+            FINE CONTENITORE ARTICOLO
+        FINE SEZIONE PRINCIPALE
+    FINE CORPO DELLA PAGINA
+FINE DOCUMENTO HTML
+
+
+// --------- CSS
+INIZIO REGOLE DI STILE (CSS)
+
+    // STILE PER I TITOLI PRINCIPALI E SECONDARI
+    PER OGNI ELEMENTO h1 E h2:
+        Applica un margine esterno di 10 pixel (spazio fuori dal testo)
+        Applica un padding interno di 10 pixel (spazio dentro lo sfondo)
+        Imposta il colore del testo a Verde Fluorescente (valore RGB: 25, 255, 159)
+        Imposta il colore dello sfondo a Acquamarina
+        Allinea il testo perfettamente al centro
+
+    // STILE PER LA SEZIONE
+    PER OGNI ELEMENTO section:
+        Applica un padding interno di 15 pixel
+
+    // STILE PER LA SCHEDA CONTENITORE
+    PER OGNI ELEMENTO div:
+        Applica un padding interno di 15 pixel
+        Imposta la larghezza fissa a 250 pixel
+        Imposta l'altezza fissa a 250 pixel
+        Arrotonda gli angoli del bordo con un raggio di 12 pixel
+        Imposta il colore dello sfondo a Grigio (#ccc)
+        Crea un'ombra con queste caratteristiche:
+            - Spostamento Orizzontale (X): 0 pixel
+            - Spostamento Verticale (Y): 4 pixel
+            - Intensità della sfocatura: 8 pixel
+            - Colore dell'ombra: Grigio
+        Allinea il contenitore al centro della pagina (margin: auto)
+        Aggiungi un margine inferiore di 15 pixel rispetto all'elemento successivo
+
+    // STILE PER L'IMMAGINE DENTRO LA SCHEDA
+    PER OGNI ELEMENTO img CHE SI TROVA DENTRO UN div:
+        Trasforma l'elemento in un blocco (prende tutta la larghezza disponibile sulla sua riga)
+        Arrotonda gli angoli del bordo al 50% (trasforma l'immagine in un cerchio perfetto)
+        Crea un'ombra grigia (0px X, 4px Y, 8px sfocatura)
+        Allinea l'immagine al centro del suo contenitore (margin: auto)
+
+    // STILE PER IL BOTTONE
+    PER OGNI ELEMENTO button:
+        Trasforma l'elemento in un blocco (si posiziona sulla sua riga)
+        Imposta la larghezza al 50% rispetto al div che lo contiene
+        Allinea il bottone al centro del div (margin: auto)
+        Rimuovi qualsiasi bordo predefinito (border: none)
+        Applica uno spazio interno: 10 pixel sopra/sotto e 0 pixel a destra/sinistra
+        Arrotonda gli angoli del bottone con un raggio di 8 pixel
+        Crea un'ombra grigia (0px X, 4px Y, 8px sfocatura)
+        Cambia la forma del cursore in una "manina" (pointer) quando l'utente ci passa sopra
+
+    // EFFETTI AL PASSAGGIO DEL MOUSE (PSEUDO-CLASSI)
+
+    QUANDO IL MOUSE PASSA SOPRA UN button (Stato :hover):
+        Cambia il colore dello sfondo in Verde
+        Cambia il colore del testo in Bianco
+        Imposta lo stile del testo in Grassetto (bold)
+        Rimuovi completamente l'ombra del bottone (box-shadow: none)
+
+    QUANDO IL MOUSE PASSA SOPRA UN div (Stato :hover):
+        Cambia il colore dello sfondo del contenitore in Grigio Chiarissimo (#f3f3f3)
+        Rimuovi completamente l'ombra del contenitore (box-shadow: none)
+
+FINE REGOLE DI STILE
